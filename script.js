@@ -92,7 +92,7 @@
     ctx.drawImage(photo, x, y, w, h);
   };
 
-  fetch('hero-new.webp', { cache: 'force-cache' })
+  fetch('hero-new.webp?v=20261004-2', { cache: 'no-store' })
     .then(response => response.blob())
     .then(blob => {
       const url = URL.createObjectURL(blob);
@@ -103,7 +103,7 @@
       photo.src = url;
     })
     .catch(() => {
-      photo.src = 'hero-new.webp';
+      photo.src = 'hero-new.webp?v=20261004-2';
       photo.onload = draw;
     });
 
