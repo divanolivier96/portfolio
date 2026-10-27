@@ -1,110 +1,34 @@
-/* render the hero photo through a canvas so browser Content Credentials overlays do not attach to the image element */
 (() => {
-  const canvas = document.querySelector('.hero-photo');
   const hero = document.querySelector('.hero');
-  const lens = document.querySelector('.difference-lens');
-  const headline = document.querySelector('.headline-reveal');
-  const hiddenPhrase = document.querySelector('.hidden-phrase');
-  const headlineMain = document.querySelector('.headline-main');
-  if (!canvas) return;
+  const photo = document.querySelector('.hero-photo');
+  if (!hero || !photo) return;
 
-  if (hero && lens && window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const portfolioButton = hero.querySelector('.pill');
-    const resetHeadlineReveal = () => {
-      if (!hiddenPhrase || !headlineMain) return;
-      hiddenPhrase.style.clipPath = 'circle(0px at 50% 50%)';
-      hiddenPhrase.style.webkitClipPath = 'circle(0px at 50% 50%)';
-      headlineMain.style.maskImage = 'none';
-      headlineMain.style.webkitMaskImage = 'none';
-    };
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!finePointer || reducedMotion) return;
 
-    hero.addEventListener('pointermove', event => {
-      lens.style.left = event.clientX + 'px';
-      lens.style.top = event.clientY + 'px';
+  let frame = 0;
+  hero.addEventListener('pointermove', event => {
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    hero.style.setProperty('--pointer-x', (x * 100).toFixed(2) + '%');
+    hero.style.setProperty('--pointer-y', (y * 100).toFixed(2) + '%');
 
-      const overPortfolioButton = portfolioButton && portfolioButton.matches(':hover');
-      if (overPortfolioButton) {
-        resetHeadlineReveal();
-        lens.style.opacity = '0';
-        return;
-      }
-
-      if (headline && hiddenPhrase && headlineMain) {
-        const rect = headline.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        const radius = lens.getBoundingClientRect().width / 2;
-
-        // The alternate phrase exists only inside the same circular reveal
-        // radius as the Difference lens.
-        const circle = 'circle(' + radius + 'px at ' + x + 'px ' + y + 'px)';
-        hiddenPhrase.style.clipPath = circle;
-        hiddenPhrase.style.webkitClipPath = circle;
-
-        // The original phrase is visible everywhere except inside that circle.
-        // The transparent centre lets the alternate phrase underneath show through.
-        const mask = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, transparent 0, transparent ' + radius + 'px, #000 ' + (radius + 1) + 'px)';
-        headlineMain.style.maskImage = mask;
-        headlineMain.style.webkitMaskImage = mask;
-      }
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const moveX = (x - 0.5) * -12;
+      const moveY = (y - 0.5) * -8;
+      photo.style.transform = 'translate3d(' + moveX.toFixed(2) + 'px,' + moveY.toFixed(2) + 'px,0) scale(1.015)';
+      hero.classList.add('is-interacting');
     });
+  });
 
-    hero.addEventListener('pointerenter', event => {
-      lens.style.left = event.clientX + 'px';
-      lens.style.top = event.clientY + 'px';
-      if (portfolioButton && portfolioButton.matches(':hover')) lens.style.opacity = '0';
-    });
-
-    if (portfolioButton) {
-      portfolioButton.addEventListener('pointerenter', () => {
-        resetHeadlineReveal();
-        lens.style.opacity = '0';
-      });
-      portfolioButton.addEventListener('pointerleave', () => {
-        lens.style.opacity = '';
-      });
-    }
-
-    hero.addEventListener('pointerleave', resetHeadlineReveal);
-  }
-  const ctx = canvas.getContext('2d', { alpha: false });
-  const photo = new Image();
-
-  const draw = () => {
-    const rect = canvas.getBoundingClientRect();
-    if (!rect.width || !rect.height || !photo.naturalWidth || !photo.naturalHeight) return;
-
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round(rect.width * dpr);
-    canvas.height = Math.round(rect.height * dpr);
-
-    const scale = Math.max(rect.width / photo.naturalWidth, rect.height / photo.naturalHeight);
-    const w = photo.naturalWidth * scale;
-    const h = photo.naturalHeight * scale;
-    const x = (rect.width - w) / 2;
-    const y = (rect.height - h) / 2;
-
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
-    ctx.fillStyle = '#d3d3d3';
-    ctx.fillRect(0, 0, rect.width, rect.height);
-    ctx.drawImage(photo, x, y, w, h);
-  };
-
-  fetch('hero-new.webp?v=20261004-2', { cache: 'no-store' })
-    .then(response => response.blob())
-    .then(blob => {
-      const url = URL.createObjectURL(blob);
-      photo.onload = () => {
-        draw();
-        URL.revokeObjectURL(url);
-      };
-      photo.src = url;
-    })
-    .catch(() => {
-      photo.src = 'hero-new.webp?v=20261004-2';
-      photo.onload = draw;
-    });
-
+  hero.addEventListener('pointerleave', () => {
+    cancelAnimationFrame(frame);
+    photo.style.transform = '';
+    hero.style.setProperty('--pointer-x', '50%');
+    hero.style.setProperty('--pointer-y', '50%');
+    hero.classList.remove('is-interacting');
+  });
 })();
