@@ -69,10 +69,10 @@ h1,h2{font-weight:700;letter-spacing:-.05em}
 
 
 /* Difference-spot cursor: a moving pool of inverted colour */
-.difference-spot,.triangle-cursor{position:fixed;left:0;top:0;pointer-events:none;z-index:9999;opacity:0;will-change:transform;mix-blend-mode:difference}
-.difference-spot{width:190px;height:190px;border-radius:50%;background:#fff;transform:translate3d(-50%,-50%,0);transition:opacity .18s ease}
-.triangle-cursor{width:22px;height:26px;background:#fff;clip-path:polygon(0 0,100% 72%,34% 78%,16% 100%);transform:translate3d(-3px,-3px,0);transition:opacity .18s ease,transform .16s ease}
-.triangle-cursor.is-over-control{transform:translate3d(-3px,-3px,0) scale(1.25) rotate(12deg)}
+.difference-spot,.triangle-cursor{position:fixed;left:0;top:0;pointer-events:none;z-index:9999;opacity:0;mix-blend-mode:difference}
+.difference-spot{width:190px;height:190px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);transition:opacity .12s linear}
+.triangle-cursor{width:22px;height:26px;background:#fff;clip-path:polygon(0 0,100% 72%,34% 78%,16% 100%);transform:translate(-50%,-50%);transition:opacity .12s linear}
+.triangle-cursor.is-over-control{filter:drop-shadow(0 0 1px rgba(255,255,255,.0))}
 body.has-custom-cursor,body.has-custom-cursor a,body.has-custom-cursor button{cursor:none!important}
 body.has-custom-cursor .difference-spot,body.has-custom-cursor .triangle-cursor{opacity:1}
 @media(max-width:800px),(pointer:coarse),(prefers-reduced-motion:reduce){.difference-spot,.triangle-cursor{display:none!important}body.has-custom-cursor,body.has-custom-cursor a,body.has-custom-cursor button{cursor:auto!important}}
