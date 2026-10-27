@@ -41,17 +41,15 @@
 
   let pointerX = -100;
   let pointerY = -100;
-  let frame = 0;
   const controls = 'a, button, input, select, textarea, [role="button"], .pill, .topnav nav a';
 
   window.addEventListener('pointermove', event => {
     pointerX = event.clientX;
     pointerY = event.clientY;
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(() => {
-      spot.style.transform = 'translate3d(' + pointerX + 'px,' + pointerY + 'px,0) translate(-50%,-50%)';
-      triangle.style.transform = 'translate3d(' + pointerX + 'px,' + pointerY + 'px,0) translate(-3px,-3px)';
-    });
+    spot.style.left = pointerX + 'px';
+    spot.style.top = pointerY + 'px';
+    triangle.style.left = pointerX + 'px';
+    triangle.style.top = pointerY + 'px';
     const target = event.target instanceof Element ? event.target.closest(controls) : null;
     triangle.classList.toggle('is-over-control', Boolean(target));
   }, { passive: true });
