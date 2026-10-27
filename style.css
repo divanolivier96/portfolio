@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @font-face{font-family:"Helvetica Local";src:url("Helvetica.ttf") format("truetype");font-weight:400;font-display:swap}
 @font-face{font-family:"Helvetica Local";src:url("Helvetica-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
 @font-face{font-family:"Helvetica Local";src:url("helvetica-light-587ebe5a59211.ttf") format("truetype");font-weight:300;font-display:swap}
@@ -47,7 +48,7 @@ h1,h2{font-weight:700;letter-spacing:-.05em}
 .subnav{display:flex;flex-wrap:wrap;gap:1.6em;margin-top:2vh}
 .subnav a{color:var(--ink);text-decoration:none;font-size:clamp(13px,1vw,19px);font-weight:700;letter-spacing:-.02em}
 .topnav{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;padding:3.4vh var(--pad)}
-.topnav .home{font-weight:400;font-size:clamp(12px,1vw,20px);letter-spacing:0}
+.topnav .home{display:inline-block;color:var(--ink);font-family:"Permanent Marker", "Helvetica Local", sans-serif;font-weight:400;font-size:clamp(16px,1.45vw,27px);letter-spacing:-.035em;line-height:1.05;text-decoration:none;transform:rotate(-1.2deg);transform-origin:left center;position:relative;padding:.12em .08em .2em;transition:transform .2s ease,color .2s ease}.topnav .home::after{content:"";position:absolute;left:0;right:2%;bottom:-.05em;height:2px;background:currentColor;transform:rotate(-.8deg) scaleX(.92);transform-origin:left center;opacity:.8}.topnav .home:hover{color:var(--ink);text-decoration:none;transform:rotate(.4deg) translateY(-1px)}.topnav .home:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
 .topnav nav{display:flex;flex-wrap:wrap;gap:.65em;align-items:center}
 .topnav nav a{font-size:clamp(12px,.9vw,17px);min-height:2.35em;padding:.58em 1em}
 .topnav nav a[aria-current]{background:var(--bg);color:var(--ink);text-decoration:none}
