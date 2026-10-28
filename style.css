@@ -263,3 +263,11 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 /* Performance pass: keep the editorial grid, but avoid perpetual large-layer animations */
 .page::before,.page::after,.hero::before{animation:none!important;transform:none!important}
 .hero-photo{will-change:auto}
+
+
+/* Desktop scroll optimisation: remove pointer-driven paint effects and the costly layered texture */
+.page::after{display:none!important}
+.hero::after{display:none!important}
+.hero-photo{transition:none;will-change:auto}
+.triangle-cursor,.difference-spot{display:none!important}
+body.has-custom-cursor,body.has-custom-cursor a,body.has-custom-cursor button{cursor:auto!important}
