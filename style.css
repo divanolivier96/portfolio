@@ -428,30 +428,40 @@ body{background:#212121;color:#f0f0ed}
 
 
 
-/* Continuous left-to-right red waves with three clearly separated shades */
+/* Seamless moving red waves: dark burgundy, crimson and bright coral */
 .topnav{
-  background:repeating-linear-gradient(
-    110deg,
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#780606!important;
+}
+.topnav::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(
+    90deg,
     #350000 0%,
-    #780606 10%,
-    #ff5555 20%,
-    #780606 30%,
-    #350000 40%,
-    #c91f2b 50%,
-    #ff7770 60%,
-    #780606 70%,
-    #350000 80%
-  )!important;
-  background-size:200% 100%!important;
-  background-position:0% 50%;
-  animation:header-red-wave 5s linear infinite!important;
+    #780606 12.5%,
+    #ff5555 25%,
+    #780606 37.5%,
+    #350000 50%,
+    #780606 62.5%,
+    #ff7770 75%,
+    #780606 87.5%,
+    #350000 100%
+  );
+  background-size:200% 100%;
+  animation:header-red-wave 6s linear infinite;
 }
 @keyframes header-red-wave{
   from{background-position:0% 50%}
   to{background-position:100% 50%}
 }
 @media(prefers-reduced-motion:reduce){
-  .topnav{animation:none!important;background-position:50% 50%!important}
+  .topnav::before{animation:none!important;background-position:50% 50%!important}
 }
 
 
