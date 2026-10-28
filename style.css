@@ -645,3 +645,26 @@ body{background:#212121;color:#f0f0ed}
  .texture-card figcaption{flex-direction:column;gap:5px;font-size:9px}
  .texture-card figcaption span:last-child{text-align:left}
 }
+
+
+/* About and philosophy page images: fill the existing right-hand column */
+.page .cols .page-side-image{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:100%;
+  align-self:stretch;
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:800px){
+  .page .cols .page-side-image{
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+    margin-top:2rem;
+  }
+}
