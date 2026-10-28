@@ -120,3 +120,9 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .steps{font-size:clamp(32px,5vw,100px);letter-spacing:-.045em;min-width:0}
 .steps span{min-width:0;white-space:nowrap}
 @media(max-width:800px){.steps{font-size:15vw;letter-spacing:-.055em}.steps span{white-space:normal}}
+
+/* Subtle transparent grid on content areas only, never the header or contact section */
+.page{background-image:linear-gradient(to right,rgba(23,23,23,.055) 1px,transparent 1px),linear-gradient(to bottom,rgba(23,23,23,.055) 1px,transparent 1px);background-size:48px 48px;background-position:center top}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background-image:linear-gradient(to right,rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.10) 1px,transparent 1px);background-size:48px 48px;background-position:center top}
+.hero-content{z-index:2}
+@media(max-width:800px){.page{background-size:32px 32px}.hero::before{background-size:32px 32px}}
