@@ -1,8 +1,7 @@
-/* Branded welcome intro: replay on every homepage visit, including browser back/forward cache restores. */
+/* Branded welcome intro: replay on every homepage display, including back/forward restores. */
 (() => {
-  const isHome = /(?:^|\/)index\.html$/.test(window.location.pathname) ||
-    window.location.pathname.endsWith('/') ||
-    window.location.pathname === '';
+  const path = window.location.pathname;
+  const isHome = path.endsWith('/') || path.endsWith('/index.html') || path === '';
   if (!isHome) return;
 
   let splashTimer;
@@ -21,20 +20,23 @@
 
     window.clearTimeout(splashTimer);
     window.clearTimeout(removeTimer);
-    splash.classList.remove('is-exiting');
+    splash.classList.remove('is-exiting', 'is-entering');
     splash.style.opacity = '1';
     splash.style.visibility = 'visible';
+    void splash.offsetWidth;
+    splash.classList.add('is-entering');
 
     splashTimer = window.setTimeout(() => {
+      splash.classList.remove('is-entering');
       splash.classList.add('is-exiting');
       removeTimer = window.setTimeout(() => splash.remove(), 700);
     }, 2850);
   }
 
-  playIntro();
-  window.addEventListener('pageshow', (event) => {
-    if (event.persisted) playIntro();
-  });
+  // Normal page load and browser back/forward cache restore both pass through pageshow.
+  window.addEventListener('pageshow', playIntro);
+  if (document.readyState === 'complete') playIntro();
+  else window.addEventListener('load', playIntro, { once: true });
 })();
 
 /* Lightweight adaptive cursor: difference blending inverts its appearance against each background. */
