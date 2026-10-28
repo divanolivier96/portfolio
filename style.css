@@ -595,3 +595,8 @@ body{background:#212121;color:#f0f0ed}
   .intro{margin-top:2.5svh;max-width:88vw}
   .hero .pill{margin-top:3.5svh}
 }
+
+
+/* Restore the header to a solid deep red, without the animated gradient */
+.topnav{background:#780606!important}
+.topnav::before{display:none!important;animation:none!important}
