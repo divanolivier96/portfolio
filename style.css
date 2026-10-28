@@ -230,3 +230,18 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 
 /* Services already carry explicit editorial numbers in the markup */
 .services-list .service-row::before{content:none!important;display:none!important}
+
+
+/* Shared page frame: align every page to the same site-wide left edge */
+.page{
+  max-width:none;
+  margin-inline:0;
+  padding-inline:var(--pad);
+}
+
+/* Mobile performance: keep the modular grid, remove costly animated layers */
+@media(max-width:800px){
+  .page::before,.hero::before{animation:none!important}
+  .page::after{display:none}
+  .hero-photo{will-change:auto}
+}
