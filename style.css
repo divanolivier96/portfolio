@@ -606,3 +606,9 @@ body{background:#212121;color:#f0f0ed}
 .page .tag-photoshop{border-color:#31a8ff!important;color:#31a8ff!important}
 .page .tag-indesign{border-color:#ff3366!important;color:#ff3366!important}
 .page .tag-illustrator{border-color:#ff9a00!important;color:#ff9a00!important}
+
+
+/* About page Adobe tags: explicit app-colour borders and lettering */
+.page .certs .tags .tag.tag-photoshop{border:1px solid #31a8ff!important;color:#31a8ff!important}
+.page .certs .tags .tag.tag-indesign{border:1px solid #ff3366!important;color:#ff3366!important}
+.page .certs .tags .tag.tag-illustrator{border:1px solid #ff9a00!important;color:#ff9a00!important}
