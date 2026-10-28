@@ -425,3 +425,30 @@ body{background:#212121;color:#f0f0ed}
 .topnav nav a:focus-visible{
   outline-color:#fff!important;
 }
+
+
+/* Animated red gradient header, kept within the existing brand palette */
+.topnav{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(115deg,#4d0303 0%,#780606 24%,#a52222 48%,#720505 70%,#3d0202 100%)!important;
+  background-size:280% 280%!important;
+  animation:header-red-drift 18s ease-in-out infinite alternate;
+}
+.topnav>*{position:relative;z-index:1}
+@keyframes header-red-drift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 45%}
+  100%{background-position:20% 55%}
+}
+
+/* Use the circular brand mark as the pointer on precise-pointer devices */
+@media(hover:hover) and (pointer:fine){
+  html,body,body a,body button,body input,body textarea,body select{
+    cursor:url("logo-icon.svg") 16 16, auto;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .topnav{animation:none!important;background-position:50% 50%!important}
+}
