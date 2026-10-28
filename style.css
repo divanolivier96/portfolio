@@ -226,3 +226,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media(max-width:800px){
   .services-list .service-row{gap:.65rem;padding:26px 0}
 }
+
+
+/* Services already carry explicit editorial numbers in the markup */
+.services-list .service-row::before{content:none!important;display:none!important}
