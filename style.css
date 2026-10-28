@@ -456,7 +456,7 @@ body{background:#212121;color:#f0f0ed}
   );
   background-size:50% 100%;
   background-repeat:repeat-x;
-  animation:header-red-wave 4s linear infinite!important;
+  animation:header-red-wave 18s linear infinite!important;
   will-change:transform;
 }
 .topnav > *{
