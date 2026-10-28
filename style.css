@@ -115,3 +115,8 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 
 /* Match main page headings to the deep red header */
 .hero h1,.hero h2,.page h1,.row h2,.contact h2,.more h2{color:#780606}
+
+/* Keep the philosophy process labels from colliding in the three-column layout */
+.steps{font-size:clamp(32px,5vw,100px);letter-spacing:-.045em;min-width:0}
+.steps span{min-width:0;white-space:nowrap}
+@media(max-width:800px){.steps{font-size:15vw;letter-spacing:-.055em}.steps span{white-space:normal}}
