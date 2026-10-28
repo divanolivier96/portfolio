@@ -258,3 +258,8 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media(max-width:800px){
   .topnav .home-logo{width:clamp(132px,36vw,180px)}
 }
+
+
+/* Performance pass: keep the editorial grid, but avoid perpetual large-layer animations */
+.page::before,.page::after,.hero::before{animation:none!important;transform:none!important}
+.hero-photo{will-change:auto}
