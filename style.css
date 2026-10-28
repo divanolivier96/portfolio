@@ -70,7 +70,7 @@ h1,h2{font-weight:700;letter-spacing:-.05em}
 
 /* Difference-spot cursor: a moving pool of inverted colour */
 .difference-spot,.triangle-cursor{position:fixed;left:0;top:0;pointer-events:none;z-index:9999;opacity:0;mix-blend-mode:difference}
-.difference-spot{width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,1) 0%,rgba(255,255,255,.94) 18%,rgba(255,255,255,.72) 35%,rgba(255,255,255,.38) 52%,rgba(255,255,255,.12) 68%,rgba(255,255,255,0) 78%);transform:translate(-50%,-50%);transition:opacity .12s linear}
+.difference-spot{display:none!important}
 .triangle-cursor{width:22px;height:26px;background:#fff;clip-path:polygon(0 0,100% 72%,34% 78%,16% 100%);transform:translate(-50%,-50%);transition:opacity .12s linear}
 .triangle-cursor.is-over-control{filter:drop-shadow(0 0 1px rgba(255,255,255,.0))}
 body.has-custom-cursor,body.has-custom-cursor a,body.has-custom-cursor button{cursor:none!important}
@@ -81,7 +81,7 @@ body.has-custom-cursor .difference-spot,body.has-custom-cursor .triangle-cursor{
 :root{--bg:#d8d8d5;--ink:#171717;--rule:rgba(23,23,23,.72)}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
 .topnav{align-items:center;border-bottom:1px solid rgba(23,23,23,.16);padding-top:26px;padding-bottom:26px}
-.topnav nav a{background:transparent;color:var(--ink);border-color:transparent;border-radius:2px;box-shadow:none}
+.topnav nav a{background:transparent;color:var(--ink);border:1.5px solid var(--ink);border-radius:2px;box-shadow:none}
 .topnav nav a:hover{background:var(--ink);color:var(--bg);box-shadow:none;transform:none}
 .topnav nav a[aria-current]{background:transparent;color:var(--ink);border-color:var(--ink);text-decoration:none}
 .pill{border-radius:2px;min-height:48px}
