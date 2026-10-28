@@ -112,3 +112,6 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .topnav nav a{color:#fff;border-color:#fff}
 .topnav nav a:hover{background:#fff;color:#780606}
 .topnav nav a[aria-current]{background:transparent;color:#fff;border-color:#fff}
+
+/* Match main page headings to the deep red header */
+.hero h1,.hero h2,.page h1,.row h2,.contact h2,.more h2{color:#780606}
