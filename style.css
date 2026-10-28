@@ -103,3 +103,12 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .more{padding:clamp(50px,7vw,100px) 0;border-top:1px solid var(--rule)}
 @media(max-width:800px){.cols{display:block}.row{padding:24px 0}.steps{grid-template-columns:1fr;gap:14px}.steps span:nth-child(2),.steps span:nth-child(3){text-align:left}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.row{transition:none}}
+
+/* Deep red navigation header */
+.topnav{background:#780606;color:#fff;border-bottom-color:rgba(255,255,255,.28)}
+.topnav .home{color:#fff}
+.topnav .home:hover{color:#fff}
+.topnav .home-slash{background:#fff;color:#780606}
+.topnav nav a{color:#fff;border-color:#fff}
+.topnav nav a:hover{background:#fff;color:#780606}
+.topnav nav a[aria-current]{background:transparent;color:#fff;border-color:#fff}
