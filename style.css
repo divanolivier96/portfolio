@@ -583,3 +583,15 @@ body{background:#212121;color:#f0f0ed}
     letter-spacing:-.025em;
   }
 }
+
+
+/* Mobile homepage: remove the awkwardly cropped portrait and tighten the hero flow */
+@media(max-width:800px){
+  .hero-photo{display:none!important}
+  .hero{min-height:0}
+  .hero-content{min-height:0;padding:6svh var(--pad) 8svh}
+  .hero h1{margin-top:4svh}
+  .hero h2{margin-top:3.5svh;max-width:88vw}
+  .intro{margin-top:2.5svh;max-width:88vw}
+  .hero .pill{margin-top:3.5svh}
+}
