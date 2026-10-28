@@ -340,3 +340,41 @@ body{background:#212121;color:#f0f0ed}
 .contact{border-top-width:2px!important}
 .page>.more{margin-top:14vh;padding:clamp(50px,7vw,100px) 0 9vh}
 .page>.more h2{max-width:14ch}
+
+
+/* Final palette: red is reserved for the header and button fills */
+.hero h1,.hero h2,.page h1,.page h2,.page h3,
+.row h2,.contact h2,.more h2,.services-list .service-number{
+  color:#f0f0ed!important;
+}
+.page .tag,.page .subnav a{color:#f0f0ed!important}
+.page .row,.page .rows,.page .more,.page .certs,.page .steps{
+  border-color:rgba(240,240,237,.62)!important;
+}
+.contact,.page>.more{
+  border-top-color:rgba(23,23,23,.65)!important;
+}
+.contact h2,.page>.more h2{color:#171717!important}
+
+/* Red buttons at rest; black on hover for a crisp, consistent interaction */
+.pill,.topnav nav a,.contact .pill,.page>.more .pill{
+  background:#780606!important;
+  color:#fff!important;
+  border-color:#780606!important;
+  transition:background-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.pill:hover,.topnav nav a:hover,.contact .pill:hover,.page>.more .pill:hover{
+  background:#171717!important;
+  color:#fff!important;
+  border-color:#171717!important;
+  box-shadow:4px 4px 0 rgba(240,240,237,.16)!important;
+}
+.topnav nav a[aria-current]{
+  background:#780606!important;
+  color:#fff!important;
+  border-color:#fff!important;
+}
+.pill:focus-visible,.topnav nav a:focus-visible,
+.contact .pill:focus-visible,.page>.more .pill:focus-visible{
+  outline-color:#f0f0ed!important;
+}
