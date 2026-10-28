@@ -312,3 +312,31 @@ body{background:#212121;color:#f0f0ed}
       linear-gradient(to bottom,rgba(240,240,237,.16) 1px,transparent 1px 35px,rgba(240,240,237,.16) 35px 36px,transparent 36px);
   }
 }
+
+
+/* Consistency fixes: contain the content grid below the header and restore a light footer */
+.page::before{inset:0!important}
+.page::after{display:none!important}
+.contact,.page>.more{
+  background:#d8d8d5!important;
+  color:#171717!important;
+  border-top:1px solid rgba(23,23,23,.65)!important;
+}
+.contact h2,.page>.more h2{color:#780606!important}
+.contact .eyebrow,.contact .meta,.page>.more .eyebrow{color:#171717!important}
+.contact .pill,.page>.more .pill{
+  background:#171717!important;
+  color:#d8d8d5!important;
+  border-color:#171717!important;
+}
+.contact .pill:hover,.page>.more .pill:hover{
+  background:#d8d8d5!important;
+  color:#171717!important;
+  box-shadow:4px 4px 0 rgba(23,23,23,.16)!important;
+}
+.contact .pill:focus-visible,.page>.more .pill:focus-visible{
+  outline-color:#171717!important;
+}
+.contact{border-top-width:2px!important}
+.page>.more{margin-top:14vh;padding:clamp(50px,7vw,100px) 0 9vh}
+.page>.more h2{max-width:14ch}
