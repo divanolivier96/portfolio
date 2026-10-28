@@ -1,22 +1,18 @@
-/* Branded welcome intro, once per browser session. */
+/* Branded welcome intro: replay whenever the homepage is loaded. */
 (() => {
+  const isHome = /(?:^|\/)index\.html$/.test(window.location.pathname) ||
+    window.location.pathname.endsWith('/') ||
+    window.location.pathname === '';
   const splash = document.querySelector('.intro-splash');
-  if (splash) {
-    let alreadySeen = false;
-    try {
-      alreadySeen = sessionStorage.getItem('divanIntroSeen') === '1';
-      if (!alreadySeen) sessionStorage.setItem('divanIntroSeen', '1');
-    } catch (_) {}
-
-    if (alreadySeen) {
-      splash.remove();
-    } else {
-      window.setTimeout(() => {
-        splash.classList.add('is-exiting');
-        window.setTimeout(() => splash.remove(), 700);
-      }, 2850);
-    }
+  if (!splash) return;
+  if (!isHome) {
+    splash.remove();
+    return;
   }
+  window.setTimeout(() => {
+    splash.classList.add('is-exiting');
+    window.setTimeout(() => splash.remove(), 700);
+  }, 2850);
 })();
 
 /* Lightweight adaptive cursor: difference blending inverts its appearance against each background. */
