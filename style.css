@@ -647,24 +647,30 @@ body{background:#212121;color:#f0f0ed}
 }
 
 
-/* About and philosophy images align to the full height of the adjacent copy */
+/* About and philosophy: the text controls desktop row height.
+   The absolutely positioned image cannot enlarge the grid row. */
+.page .cols .page-side-image-wrap{
+  position:relative;
+  min-width:0;
+  min-height:0;
+  align-self:stretch;
+  overflow:hidden;
+}
 .page .cols .page-side-image{
+  position:absolute;
+  inset:0;
   display:block;
   width:100%;
   height:100%;
   min-width:0;
   min-height:0;
-  align-self:stretch;
   object-fit:cover;
   object-position:center;
 }
 @media(max-width:800px){
-  .page .cols .page-side-image{
+  .page .cols .page-side-image-wrap{
     width:100%;
-    height:auto;
-    min-height:0;
     aspect-ratio:4 / 3;
-    object-fit:cover;
     margin-top:2rem;
   }
 }
