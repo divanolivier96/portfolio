@@ -127,20 +127,20 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .hero-content{z-index:2}
 @media(max-width:800px){.page{background-size:32px 32px}.hero::before{background-size:32px 32px}}
 
-/* Continuous Swiss grid motion: flowing scale, offset, rotation and layered geometry */
+/* Editorial modular grid: defined panels with deliberate gutters */
 .page{position:relative;isolation:isolate;background-image:none}
 .page::before,.page::after{content:"";position:absolute;inset:-3%;pointer-events:none;z-index:0}
 .page::before{
   opacity:.42;
   background-image:
-    linear-gradient(to right,rgba(23,23,23,.10) 1px,transparent 1px),
-    linear-gradient(to bottom,rgba(23,23,23,.10) 1px,transparent 1px);
-  background-size:64px 64px;
+    linear-gradient(to right,rgba(23,23,23,.13) 1px,transparent 1px 75px,rgba(23,23,23,.13) 75px 76px,transparent 76px),
+    linear-gradient(to bottom,rgba(23,23,23,.13) 1px,transparent 1px 75px,rgba(23,23,23,.13) 75px 76px,transparent 76px);
+  background-size:88px 88px;
   background-position:0 0;
   animation:grid-flow 24s linear infinite;
 }
 .page::after{
-  opacity:.18;
+  opacity:.14;
   background-image:
     repeating-radial-gradient(circle at 50% 35%,rgba(23,23,23,.12) 0 1px,transparent 1px 28px),
     repeating-linear-gradient(32deg,transparent 0 31px,rgba(23,23,23,.08) 31px 32px,transparent 32px 64px);
@@ -151,11 +151,11 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .page>*{position:relative;z-index:1}
 .page>.more{background:var(--bg)}
 @keyframes grid-flow{
-  0%{background-size:64px 64px;background-position:0 0;transform:translate3d(0,0,0)}
-  25%{background-size:76px 76px;background-position:19px 11px;transform:translate3d(-.5%,.25%,0)}
-  50%{background-size:58px 58px;background-position:31px 27px;transform:translate3d(.25%,-.25%,0)}
-  75%{background-size:70px 70px;background-position:11px 39px;transform:translate3d(.5%,.15%,0)}
-  100%{background-size:64px 64px;background-position:0 0;transform:translate3d(0,0,0)}
+  0%{background-position:0 0;transform:translate3d(0,0,0)}
+  25%{background-position:22px 13px;transform:translate3d(-.5%,.25%,0)}
+  50%{background-position:37px 31px;transform:translate3d(.25%,-.25%,0)}
+  75%{background-position:13px 44px;transform:translate3d(.5%,.15%,0)}
+  100%{background-position:0 0;transform:translate3d(0,0,0)}
 }
 @keyframes geometry-flow{
   0%{transform:rotate(0deg) scale(1);background-position:0 0,0 0}
@@ -167,20 +167,30 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .hero::before{
   content:"";position:absolute;inset:-3%;pointer-events:none;z-index:1;
   background-image:
-    linear-gradient(to right,rgba(255,255,255,.12) 1px,transparent 1px),
-    linear-gradient(to bottom,rgba(255,255,255,.12) 1px,transparent 1px);
-  background-size:64px 64px;background-position:0 0;
+    linear-gradient(to right,rgba(255,255,255,.15) 1px,transparent 1px 75px,rgba(255,255,255,.15) 75px 76px,transparent 76px),
+    linear-gradient(to bottom,rgba(255,255,255,.15) 1px,transparent 1px 75px,rgba(255,255,255,.15) 75px 76px,transparent 76px);
+  background-size:88px 88px;background-position:0 0;
   animation:hero-grid-flow 24s linear infinite;
 }
 @keyframes hero-grid-flow{
-  0%{background-size:64px 64px;background-position:0 0;transform:translate3d(0,0,0)}
-  25%{background-size:76px 76px;background-position:19px 11px;transform:translate3d(-.5%,.25%,0)}
-  50%{background-size:58px 58px;background-position:31px 27px;transform:translate3d(.25%,-.25%,0)}
-  75%{background-size:70px 70px;background-position:11px 39px;transform:translate3d(.5%,.15%,0)}
-  100%{background-size:64px 64px;background-position:0 0;transform:translate3d(0,0,0)}
+  0%{background-position:0 0;transform:translate3d(0,0,0)}
+  25%{background-position:22px 13px;transform:translate3d(-.5%,.25%,0)}
+  50%{background-position:37px 31px;transform:translate3d(.25%,-.25%,0)}
+  75%{background-position:13px 44px;transform:translate3d(.5%,.15%,0)}
+  100%{background-position:0 0;transform:translate3d(0,0,0)}
 }
 @media(max-width:800px){
-  .page::before,.hero::before{background-size:42px 42px}
+  .page::before,.hero::before{
+    background-image:
+      linear-gradient(to right,rgba(23,23,23,.13) 1px,transparent 1px 35px,rgba(23,23,23,.13) 35px 36px,transparent 36px),
+      linear-gradient(to bottom,rgba(23,23,23,.13) 1px,transparent 1px 35px,rgba(23,23,23,.13) 35px 36px,transparent 36px);
+    background-size:48px 48px;
+  }
+  .hero::before{
+    background-image:
+      linear-gradient(to right,rgba(255,255,255,.15) 1px,transparent 1px 35px,rgba(255,255,255,.15) 35px 36px,transparent 36px),
+      linear-gradient(to bottom,rgba(255,255,255,.15) 1px,transparent 1px 35px,rgba(255,255,255,.15) 35px 36px,transparent 36px);
+  }
   .page::after{background-size:100% 100%,100% 100%}
 }
 @media(prefers-reduced-motion:reduce){
