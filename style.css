@@ -129,7 +129,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 
 /* Animated Swiss grid system: gutters, modular cells, radial and axial phases */
 .page{position:relative;isolation:isolate;background-image:none}
-.page::before,.page::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1}
+.page::before,.page::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0}
 .page::before{
   opacity:.55;
   background-image:
@@ -147,7 +147,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
   background-size:100% 100%,100% 100%;
   animation:grid-alternate 18s ease-in-out infinite;
 }
-.page>.eyebrow,.page>h1,.page>.lead,.page>.rows,.page>.cols,.page>.certs,.page>.steps,.page>.more{position:relative;z-index:1}
+.page>*{position:relative;z-index:1}
 .page>.more{background:var(--bg)}
 @keyframes grid-modular{
   0%,22%,100%{background-size:60px 60px;background-position:6px 6px;opacity:.55}
