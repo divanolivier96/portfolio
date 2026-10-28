@@ -271,3 +271,44 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 .hero-photo{transition:none;will-change:auto}
 .triangle-cursor,.difference-spot{display:none!important}
 body.has-custom-cursor,body.has-custom-cursor a,body.has-custom-cursor button{cursor:auto!important}
+
+
+/* Experimental dark theme: easy to revert by removing this final block */
+:root{--bg:#212121;--ink:#f0f0ed;--rule:rgba(240,240,237,.62)}
+body{background:#212121;color:#f0f0ed}
+.hero h1,.hero h2,.page h1,.row h2,.contact h2,.more h2{color:#f0f0ed}
+.topnav{background:#780606;color:#fff;border-bottom-color:rgba(255,255,255,.32)}
+.topnav .home,.topnav .home:hover{color:#fff}
+.topnav .home-logo{filter:brightness(0) invert(1)}
+.topnav .home-slash{background:#fff;color:#780606}
+.topnav nav a{color:#fff;border-color:#fff}
+.topnav nav a:hover{background:#fff;color:#780606}
+.topnav nav a[aria-current]{background:transparent;color:#fff;border-color:#fff}
+.pill,.topnav nav a{border-color:currentColor}
+.pill{background:#f0f0ed;color:#212121;border-color:#f0f0ed}
+.pill:hover{background:#212121;color:#f0f0ed;box-shadow:4px 4px 0 rgba(240,240,237,.18)}
+.pill:focus-visible,.topnav nav a:focus-visible{outline-color:#f0f0ed}
+.topnav nav a{background:transparent;color:#fff;border-color:#fff}
+.topnav nav a:hover{background:#fff;color:#780606}
+.topnav nav a[aria-current]{background:transparent;color:#fff;border-color:#fff}
+.topnav .home:focus-visible{outline-color:#fff}
+.page{background-color:#212121}
+.page::before{
+  background-image:
+    linear-gradient(to right,rgba(240,240,237,.16) 1px,transparent 1px 75px,rgba(240,240,237,.16) 75px 76px,transparent 76px),
+    linear-gradient(to bottom,rgba(240,240,237,.16) 1px,transparent 1px 75px,rgba(240,240,237,.16) 75px 76px,transparent 76px);
+}
+.page::after{display:none!important}
+.row,.rows,.more,.contact{border-color:rgba(240,240,237,.62)}
+.certs,.rows{border-color:rgba(240,240,237,.62)}
+.tag{border-color:#f0f0ed;color:#f0f0ed}
+.subnav a{color:#f0f0ed}
+.services-list .service-number{color:#ffaaa3}
+.page>.more{background:#212121}
+@media(max-width:800px){
+  .page::before,.hero::before{
+    background-image:
+      linear-gradient(to right,rgba(240,240,237,.16) 1px,transparent 1px 35px,rgba(240,240,237,.16) 35px 36px,transparent 36px),
+      linear-gradient(to bottom,rgba(240,240,237,.16) 1px,transparent 1px 35px,rgba(240,240,237,.16) 35px 36px,transparent 36px);
+  }
+}
