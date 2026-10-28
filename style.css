@@ -454,3 +454,26 @@ body{background:#212121;color:#f0f0ed}
 @media(prefers-reduced-motion:reduce){
   .topnav{animation:none!important;background-position:50% 50%!important}
 }
+
+
+/* Inverting logo cursor: difference blending keeps it visible on both dark and light sections */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html,body,body a,body button,body input,body textarea,body select{cursor:none!important}
+  .inverting-cursor{
+    position:fixed;
+    top:0;
+    left:0;
+    width:32px;
+    height:32px;
+    z-index:10000;
+    pointer-events:none;
+    opacity:0;
+    transform:translate(-50%,-50%);
+    mix-blend-mode:difference;
+    will-change:transform;
+  }
+  .inverting-cursor.is-visible{opacity:1}
+}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){
+  .inverting-cursor{display:none!important}
+}
