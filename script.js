@@ -1,3 +1,24 @@
+/* Branded welcome intro, once per browser session. */
+(() => {
+  const splash = document.querySelector('.intro-splash');
+  if (splash) {
+    let alreadySeen = false;
+    try {
+      alreadySeen = sessionStorage.getItem('divanIntroSeen') === '1';
+      if (!alreadySeen) sessionStorage.setItem('divanIntroSeen', '1');
+    } catch (_) {}
+
+    if (alreadySeen) {
+      splash.remove();
+    } else {
+      window.setTimeout(() => {
+        splash.classList.add('is-exiting');
+        window.setTimeout(() => splash.remove(), 700);
+      }, 2850);
+    }
+  }
+})();
+
 /* Lightweight adaptive cursor: difference blending inverts its appearance against each background. */
 (() => {
   if (!window.matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)').matches) return;
