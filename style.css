@@ -245,3 +245,16 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
   .page::after{display:none}
   .hero-photo{will-change:auto}
 }
+
+
+/* Use the horizontal brand mark as the persistent home link */
+.topnav .home{flex-shrink:0}
+.topnav .home-logo{
+  display:block;
+  width:clamp(150px,17vw,220px);
+  height:auto;
+  filter:brightness(0) invert(1);
+}
+@media(max-width:800px){
+  .topnav .home-logo{width:clamp(132px,36vw,180px)}
+}
