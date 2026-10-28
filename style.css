@@ -378,3 +378,31 @@ body{background:#212121;color:#f0f0ed}
 .contact .pill:focus-visible,.page>.more .pill:focus-visible{
   outline-color:#f0f0ed!important;
 }
+
+
+/* Full-bleed contact panels on subpages, matching the homepage section edge to edge */
+.page>.more{
+  position:relative;
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  padding:clamp(64px,10vh,120px) var(--pad) clamp(72px,11vh,140px)!important;
+  background:#d8d8d5!important;
+  color:#171717!important;
+  border-top:2px solid rgba(23,23,23,.65)!important;
+  border-bottom:0!important;
+}
+.page>.more h2{
+  color:#171717!important;
+  max-width:14ch;
+}
+.page>.more .pill{
+  margin-top:1vh;
+}
+@media(max-width:800px){
+  .page>.more{
+    padding-top:8vh!important;
+    padding-bottom:9vh!important;
+  }
+}
