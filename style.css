@@ -196,3 +196,33 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media(prefers-reduced-motion:reduce){
   .page::before,.page::after,.hero::before{animation:none!important}
 }
+
+
+/* Services page: left-aligned editorial stacks */
+.services-list .service-row{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.7rem;
+  padding:clamp(28px,4.5vh,58px) 0;
+}
+.services-list .service-number{
+  display:block;
+  font-size:clamp(12px,.9vw,16px);
+  line-height:1;
+  letter-spacing:.12em;
+  font-weight:700;
+  color:#780606;
+  font-variant-numeric:tabular-nums;
+}
+.services-list .service-row h2{
+  max-width:18ch;
+  text-align:left;
+}
+.services-list .service-row p{
+  max-width:38em;
+  text-align:left;
+}
+@media(max-width:800px){
+  .services-list .service-row{gap:.65rem;padding:26px 0}
+}
