@@ -406,3 +406,22 @@ body{background:#212121;color:#f0f0ed}
     padding-bottom:9vh!important;
   }
 }
+
+
+/* Header navigation: light buttons at rest, black on hover */
+.topnav nav a,
+.topnav nav a[aria-current]{
+  background:#f0f0ed!important;
+  color:#171717!important;
+  border-color:#f0f0ed!important;
+}
+.topnav nav a:hover,
+.topnav nav a[aria-current]:hover{
+  background:#171717!important;
+  color:#fff!important;
+  border-color:#171717!important;
+  box-shadow:4px 4px 0 rgba(255,255,255,.16)!important;
+}
+.topnav nav a:focus-visible{
+  outline-color:#fff!important;
+}
