@@ -600,3 +600,9 @@ body{background:#212121;color:#f0f0ed}
 /* Restore the header to a solid deep red, without the animated gradient */
 .topnav{background:#780606!important}
 .topnav::before{display:none!important;animation:none!important}
+
+
+/* Adobe application tags: match each app's familiar icon colour */
+.page .tag-photoshop{border-color:#31a8ff!important;color:#31a8ff!important}
+.page .tag-indesign{border-color:#ff3366!important;color:#ff3366!important}
+.page .tag-illustrator{border-color:#ff9a00!important;color:#ff9a00!important}
