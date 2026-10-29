@@ -1432,3 +1432,11 @@ body .contact .pill:hover,
 body .contact button:hover{
   color:#F2EBDD!important;
 }
+
+
+/* Homepage hero copy: bone text from the headline through the introductory paragraph. */
+body.palette-home .hero-content h1,
+body.palette-home .hero-content h2,
+body.palette-home .hero-content .intro{
+  color:#F2EBDD!important;
+}
