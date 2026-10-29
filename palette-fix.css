@@ -512,3 +512,42 @@ body.palette-philosophy .page .steps {
 body.palette-philosophy .page > .more {
   margin-top: clamp(24px, 3vw, 40px) !important;
 }
+
+
+/* Home page only: bone contact field, graphite structure, vermillion accents. */
+body.palette-home .contact {
+  background: #F2EBDD !important;
+  background-color: #F2EBDD !important;
+  color: #222326 !important;
+  border-top: 2px solid #F0442E !important;
+}
+body.palette-home .contact .eyebrow,
+body.palette-home .contact .meta,
+body.palette-home .contact h2,
+body.palette-home .contact label,
+body.palette-home .contact p {
+  color: #222326 !important;
+}
+body.palette-home .contact .eyebrow {
+  color: #F0442E !important;
+}
+body.palette-home .contact .pill,
+body.palette-home .contact a.pill,
+body.palette-home .contact a.pill:visited {
+  background: #F0442E !important;
+  background-color: #F0442E !important;
+  color: #F2EBDD !important;
+  border-color: #F0442E !important;
+  box-shadow: none !important;
+}
+body.palette-home .contact .pill:hover,
+body.palette-home .contact a.pill:hover {
+  background: #222326 !important;
+  background-color: #222326 !important;
+  color: #F2EBDD !important;
+  border-color: #222326 !important;
+}
+body.palette-home .contact .pill:focus-visible {
+  outline: 3px solid #F0442E !important;
+  outline-offset: 4px !important;
+}
