@@ -1,7 +1,7 @@
 /* Homepage-only warehouse texture pack announcement. */
 .texture-notice {
   position: fixed;
-  z-index: 10000;
+  z-index: 9998;
   right: clamp(16px, 2.2vw, 30px);
   bottom: clamp(16px, 2.2vw, 30px);
   width: min(390px, calc(100vw - 32px));
