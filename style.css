@@ -1042,3 +1042,41 @@ body{background-color:var(--vermillion)!important;color:var(--graphite)!importan
  .page .lead,.page .prose p,.page .row p{padding:.5em .6em}
  .hero .intro{max-width:86vw}
 }
+
+
+/* GRAPHITE CANVAS / VERMILLION STRUCTURE / BONE ACCENT */
+:root{--bg:#222326;--ink:#F2EBDD;--rule:rgba(240,68,46,.78);--bone:#F2EBDD;--graphite:#222326;--vermillion:#F0442E;--vermillion-deep:#C83224}
+html,body,.page{background:var(--graphite)!important;color:var(--bone)!important}
+.topnav{background:var(--vermillion)!important;color:var(--graphite)!important;border-bottom:2px solid var(--vermillion)!important}
+.topnav .home,.topnav .home:hover{color:var(--graphite)!important}
+.topnav .home-logo{filter:brightness(0)!important}
+.topnav .home-slash{background:var(--graphite)!important;color:var(--bone)!important}
+.topnav nav a,.topnav nav a[aria-current]{background:transparent!important;color:var(--graphite)!important;border:1.5px solid var(--graphite)!important}
+.topnav nav a:hover,.topnav nav a[aria-current]:hover{background:var(--graphite)!important;color:var(--bone)!important;border-color:var(--graphite)!important}
+.topnav nav a:focus-visible,.topnav .home:focus-visible{outline:3px solid var(--bone)!important;outline-offset:4px}
+.hero h1,.hero h2,.page h1,.row h2,.more h2,.contact h2{color:var(--bone)!important}
+.hero .intro{display:inline-block;max-width:42em;padding:.8em 1em;background:var(--bone)!important;color:var(--graphite)!important}
+.page .lead,.page .prose p,.page .row p{color:var(--graphite)!important;background:var(--bone)!important}
+.page .lead{display:table;max-width:36em;padding:.7em .85em}
+.page .prose p{width:fit-content;max-width:100%;padding:.55em .7em}
+.page .row p{width:fit-content;max-width:100%;padding:.45em .65em}
+.page .eyebrow,.page .row:before,.services-list .service-number{color:var(--vermillion)!important}
+.page::before{opacity:.24!important;background-image:linear-gradient(to right,rgba(240,68,46,.42) 1px,transparent 1px 75px,rgba(240,68,46,.42) 75px 76px,transparent 76px),linear-gradient(to bottom,rgba(240,68,46,.42) 1px,transparent 1px 75px,rgba(240,68,46,.42) 75px 76px,transparent 76px)!important}
+.hero::before{background-image:linear-gradient(to right,rgba(240,68,46,.32) 1px,transparent 1px 75px,rgba(240,68,46,.32) 75px 76px,transparent 76px),linear-gradient(to bottom,rgba(240,68,46,.32) 1px,transparent 1px 75px,rgba(240,68,46,.32) 75px 76px,transparent 76px)!important}
+.row,.rows,.more,.contact,.certs,.resource-intro,.resource-details{border-color:var(--vermillion)!important}
+.subnav a{color:var(--bone)!important}
+.tag{border-color:var(--vermillion)!important;color:var(--vermillion)!important;background:transparent!important}
+.steps{color:var(--bone)!important}
+.pill,.page>.more .pill{background:var(--bone)!important;color:var(--graphite)!important;border-color:var(--bone)!important;box-shadow:none}
+.pill:hover,.page>.more .pill:hover{background:var(--vermillion)!important;color:var(--graphite)!important;border-color:var(--vermillion)!important;box-shadow:4px 4px 0 rgba(240,68,46,.22)!important;transform:translateY(-2px)}
+.pill:focus-visible,.contact .pill:focus-visible,.page>.more .pill:focus-visible{outline:3px solid var(--vermillion)!important;outline-offset:4px}
+.contact,.page>.more{background:var(--graphite)!important;color:var(--bone)!important;border-top:2px solid var(--vermillion)!important}
+.contact h2,.page>.more h2,.contact .eyebrow,.contact .meta,.page>.more .eyebrow{color:var(--bone)!important}
+.contact .pill,.page>.more .pill{background:var(--bone)!important;color:var(--graphite)!important;border-color:var(--bone)!important}
+.contact .pill:hover,.page>.more .pill:hover{background:var(--vermillion)!important;color:var(--graphite)!important;border-color:var(--vermillion)!important}
+.resources-page .texture-card figcaption a.download-button{background:var(--bone)!important;color:var(--graphite)!important;border-color:var(--bone)!important}
+.resources-page .texture-card figcaption a.download-button:hover{background:var(--vermillion)!important;color:var(--graphite)!important;border-color:var(--vermillion)!important}
+.texture-preview img{background:var(--graphite)}
+.intro-splash{background:var(--vermillion)!important;color:var(--graphite)!important}
+.intro-splash-content p{color:var(--graphite)!important}
+@media(max-width:800px){.page::before,.hero::before{background-image:linear-gradient(to right,rgba(240,68,46,.32) 1px,transparent 1px 35px,rgba(240,68,46,.32) 35px 36px,transparent 36px),linear-gradient(to bottom,rgba(240,68,46,.32) 1px,transparent 1px 35px,rgba(240,68,46,.32) 35px 36px,transparent 36px)!important}.page .lead,.page .prose p,.page .row p{padding:.5em .6em}.hero .intro{max-width:86vw}}
