@@ -1541,3 +1541,5 @@ body:not(.palette-home) a:focus-visible{outline:3px solid var(--accent);outline-
   body:not(.palette-home) .page::before,
   body:not(.palette-home) .page::after{animation:none!important}
 }
+
+/* Pages deployment refresh: 2026-10-29 */
