@@ -1,6 +1,0 @@
-/* Temporary site-wide Futura type test.
-   Uses installed Futura where available, with Century Gothic as a close geometric fallback.
-   For consistent Futura across devices, a licensed webfont file would be needed. */
-html, body, body * {
-  font-family: Futura, "Century Gothic", "Helvetica Local", Helvetica, Arial, sans-serif !important;
-}
