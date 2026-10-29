@@ -686,8 +686,8 @@ body{background:#212121;color:#f0f0ed}
   display:block;
   width:100%;
   height:auto;
-  max-height:75vh;
-  object-fit:contain;
+  max-height:none;
+  object-fit:initial;
 }
 .resources-overview-caption{
   display:flex;
