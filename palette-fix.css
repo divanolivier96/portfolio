@@ -413,3 +413,29 @@ body.palette-about .page .certs .tags .tag.tag-illustrator:hover {
 @media (prefers-reduced-motion: reduce) {
   body.palette-about .page .certs .tags .tag { transition: none !important; }
 }
+
+
+/* Remove any inherited panel/frame around the Adobe badges; style only each badge. */
+body.palette-about .page section.certs,
+body.palette-about .page section.certs .tags {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+body.palette-about .page section.certs .tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1.2vw !important;
+  padding: 0 !important;
+  margin-top: 3vh !important;
+}
+body.palette-about .page section.certs .tags .tag,
+body.palette-about .page section.certs .tags .tag.tag-photoshop,
+body.palette-about .page section.certs .tags .tag.tag-indesign,
+body.palette-about .page section.certs .tags .tag.tag-illustrator {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
