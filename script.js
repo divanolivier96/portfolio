@@ -14,12 +14,20 @@
       splash.className = 'intro-splash';
       splash.setAttribute('aria-label', 'Welcome');
       splash.setAttribute('role', 'status');
+      splash.style.backgroundColor = '#F0442E';
+      splash.style.color = '#F2EBDD';
       splash.innerHTML = '<div class="intro-splash-content"><img src="logo-icon.svg?v=spin3" alt="" class="intro-splash-logo"><p>Welcome</p></div>';
       document.body.prepend(splash);
     }
 
     window.clearTimeout(splashTimer);
     window.clearTimeout(removeTimer);
+    splash.style.backgroundColor = '#F0442E';
+    splash.style.color = '#F2EBDD';
+    const logo = splash.querySelector('.intro-splash-logo');
+    const label = splash.querySelector('.intro-splash-content p');
+    if (logo) logo.style.filter = 'brightness(0) saturate(100%) invert(93%) sepia(8%) saturate(440%) hue-rotate(334deg) brightness(101%) contrast(91%)';
+    if (label) label.style.color = '#F2EBDD';
     splash.classList.remove('is-exiting', 'is-entering');
     splash.style.opacity = '1';
     splash.style.visibility = 'visible';
