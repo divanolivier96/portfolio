@@ -203,3 +203,126 @@ body.palette-resources a:focus-visible {
   body.palette-resources .page::before,
   body.palette-resources .page::after { animation: none !important; }
 }
+
+
+/* Shared header: match the homepage's graphite bar on every page. */
+body.palette-about .topnav,
+body.palette-services .topnav,
+body.palette-philosophy .topnav,
+body.palette-resources .topnav {
+  background: #222326 !important;
+  background-color: #222326 !important;
+  color: #F2EBDD !important;
+  border-bottom: 1px solid rgba(242,235,221,.35) !important;
+}
+body.palette-about .topnav .home,
+body.palette-services .topnav .home,
+body.palette-philosophy .topnav .home,
+body.palette-resources .topnav .home,
+body.palette-about .topnav .home:hover,
+body.palette-services .topnav .home:hover,
+body.palette-philosophy .topnav .home:hover,
+body.palette-resources .topnav .home:hover {
+  color: #F2EBDD !important;
+}
+body.palette-about .topnav .home-logo,
+body.palette-services .topnav .home-logo,
+body.palette-philosophy .topnav .home-logo,
+body.palette-resources .topnav .home-logo {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(11%) saturate(316%) hue-rotate(333deg) brightness(103%) contrast(91%) !important;
+}
+body.palette-about .topnav nav a,
+body.palette-services .topnav nav a,
+body.palette-philosophy .topnav nav a,
+body.palette-resources .topnav nav a {
+  background: transparent !important;
+  color: #F2EBDD !important;
+  border-color: #F2EBDD !important;
+}
+body.palette-about .topnav nav a:hover,
+body.palette-services .topnav nav a:hover,
+body.palette-philosophy .topnav nav a:hover,
+body.palette-resources .topnav nav a:hover,
+body.palette-about .topnav nav a[aria-current]:hover,
+body.palette-services .topnav nav a[aria-current]:hover,
+body.palette-philosophy .topnav nav a[aria-current]:hover,
+body.palette-resources .topnav nav a[aria-current]:hover {
+  background: #F2EBDD !important;
+  color: #222326 !important;
+  border-color: #F2EBDD !important;
+}
+body.palette-about .topnav nav a[aria-current],
+body.palette-services .topnav nav a[aria-current],
+body.palette-philosophy .topnav nav a[aria-current],
+body.palette-resources .topnav nav a[aria-current] {
+  background: transparent !important;
+  color: #F2EBDD !important;
+  border-color: #F2EBDD !important;
+  text-decoration: underline !important;
+  text-decoration-color: #F0442E !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: .3em !important;
+}
+
+/* Closing CTA: graphite field, white typography, vermillion action. */
+body.palette-home .contact,
+body.palette-about .page > .more,
+body.palette-services .page > .more,
+body.palette-philosophy .page > .more,
+body.palette-resources .page > .more {
+  background: #222326 !important;
+  background-color: #222326 !important;
+  color: #FFFFFF !important;
+  border-top: 2px solid #F0442E !important;
+  border-bottom: 0 !important;
+}
+body.palette-home .contact h1,
+body.palette-home .contact h2,
+body.palette-home .contact h3,
+body.palette-home .contact p,
+body.palette-home .contact .eyebrow,
+body.palette-home .contact .meta,
+body.palette-home .contact label,
+body.palette-home .contact strong,
+body.palette-home .contact small,
+body.palette-about .page > .more h2,
+body.palette-services .page > .more h2,
+body.palette-philosophy .page > .more h2,
+body.palette-resources .page > .more h2 {
+  color: #FFFFFF !important;
+}
+body.palette-home .contact a:not(.pill),
+body.palette-home .contact a:not(.pill):visited {
+  color: #FFFFFF !important;
+  text-decoration-color: #F0442E !important;
+}
+body.palette-home .contact a.pill,
+body.palette-home .contact .pill,
+body.palette-about .page > .more .pill,
+body.palette-services .page > .more .pill,
+body.palette-philosophy .page > .more .pill,
+body.palette-resources .page > .more .pill {
+  background: #F0442E !important;
+  background-color: #F0442E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #F0442E !important;
+  box-shadow: 3px 3px 0 rgba(255,255,255,.16) !important;
+}
+body.palette-home .contact a.pill:hover,
+body.palette-about .page > .more .pill:hover,
+body.palette-services .page > .more .pill:hover,
+body.palette-philosophy .page > .more .pill:hover,
+body.palette-resources .page > .more .pill:hover {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #222326 !important;
+  border-color: #FFFFFF !important;
+}
+body.palette-home .contact .pill:focus-visible,
+body.palette-about .page > .more .pill:focus-visible,
+body.palette-services .page > .more .pill:focus-visible,
+body.palette-philosophy .page > .more .pill:focus-visible,
+body.palette-resources .page > .more .pill:focus-visible {
+  outline: 3px solid #FFFFFF !important;
+  outline-offset: 4px;
+}
