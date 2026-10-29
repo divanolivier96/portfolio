@@ -1,0 +1,44 @@
+/* Homepage-only warehouse texture pack announcement. */
+.texture-notice {
+  position: fixed;
+  z-index: 10000;
+  right: clamp(16px, 2.2vw, 30px);
+  bottom: clamp(16px, 2.2vw, 30px);
+  width: min(390px, calc(100vw - 32px));
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px 36px 16px 16px;
+  color: #F2EBDD;
+  background: #222326;
+  border: 1px solid rgba(242,235,221,.35);
+  box-shadow: 0 12px 36px rgba(0,0,0,.24);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .24s ease, transform .24s ease;
+}
+.texture-notice.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.texture-notice-image-link { display: block; width: 104px; height: 116px; overflow: hidden; background: #F2EBDD; }
+.texture-notice-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.texture-notice-copy { min-width: 0; }
+.texture-notice-eyebrow { margin: 0 0 8px; color: #F0442E; font-size: 10px; font-weight: 700; letter-spacing: .12em; line-height: 1.2; }
+.texture-notice-copy h2 { margin: 0; color: #F2EBDD; font-size: clamp(17px, 1.35vw, 21px); font-weight: 700; line-height: 1.02; letter-spacing: -.045em; }
+.texture-notice-description { margin: 8px 0 10px; color: #F2EBDD; font-size: 12px; line-height: 1.35; }
+.texture-notice-link { display: inline-flex; gap: 8px; align-items: center; color: #F2EBDD; font-size: 12px; font-weight: 700; text-decoration: underline; text-decoration-color: #F0442E; text-underline-offset: 3px; }
+.texture-notice-link:hover { color: #F0442E; }
+.texture-notice-close { position: absolute; top: 6px; right: 8px; width: 28px; height: 28px; padding: 0; border: 0; background: transparent; color: #F2EBDD; font: inherit; font-size: 25px; line-height: 1; cursor: pointer; }
+.texture-notice-close:hover { color: #F0442E; }
+.texture-notice a:focus-visible, .texture-notice-close:focus-visible { outline: 2px solid #F0442E; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .texture-notice { right: 12px; bottom: 12px; width: calc(100vw - 24px); grid-template-columns: 78px minmax(0, 1fr); gap: 12px; padding: 12px 32px 12px 12px; }
+  .texture-notice-image-link { width: 78px; height: 92px; }
+  .texture-notice-eyebrow { font-size: 9px; margin-bottom: 6px; }
+  .texture-notice-copy h2 { font-size: 17px; }
+  .texture-notice-description { font-size: 11px; margin: 6px 0 8px; }
+  .texture-notice-link { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .texture-notice { transition: none; transform: none; }
+}
