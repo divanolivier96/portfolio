@@ -721,7 +721,14 @@ body{background:#212121;color:#f0f0ed}
 }
 
 
-/* Softer corners for interactive controls, while keeping the site's editorial geometry. */
-:where(button, .pill, .download-button, input[type="button"], input[type="submit"], input[type="reset"], .topnav nav a) {
-  border-radius: 999px;
+/* Rounded interactive controls, overriding the site's older square-corner button rules. */
+button,
+a.pill,
+.pill,
+.download-button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.topnav nav a {
+  border-radius: 999px !important;
 }
