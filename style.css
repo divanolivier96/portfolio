@@ -1389,3 +1389,28 @@ body.palette-resources .contact{
   outline:3px solid #F0442E!important;
   outline-offset:4px;
 }
+
+
+/* High-contrast vermillion contact buttons. Keep this final to win against earlier theme rules. */
+body .contact a.pill,
+body .contact .pill,
+body .contact button,
+body.palette-home .contact a.pill,
+body.palette-about .contact a.pill,
+body.palette-services .contact a.pill,
+body.palette-philosophy .contact a.pill,
+body.palette-resources .contact a.pill{
+  background-color:#F0442E!important;
+  background-image:none!important;
+  color:#222326!important;
+  border:1px solid #F0442E!important;
+  box-shadow:3px 3px 0 #222326!important;
+}
+body .contact a.pill:hover,
+body .contact .pill:hover,
+body .contact button:hover{
+  background-color:#222326!important;
+  color:#F2EBDD!important;
+  border-color:#222326!important;
+  box-shadow:3px 3px 0 #F0442E!important;
+}
