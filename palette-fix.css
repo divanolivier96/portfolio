@@ -355,3 +355,29 @@ body.palette-resources .resource-intro .eyebrow,
 body.palette-resources .resource-detail-heading .eyebrow {
   color: #F0442E !important;
 }
+
+
+/* About page certifications: override legacy per-app tag colours and ensure contrast. */
+body.palette-about .page .certs {
+  background: transparent !important;
+  color: #222326 !important;
+  border-top: 1px solid rgba(34,35,38,.28) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+body.palette-about .page .certs .eyebrow {
+  color: #F0442E !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+body.palette-about .page .certs .tags,
+body.palette-about .page .certs .tags .tag,
+body.palette-about .page .certs .tags .tag.tag-photoshop,
+body.palette-about .page .certs .tags .tag.tag-indesign,
+body.palette-about .page .certs .tags .tag.tag-illustrator {
+  background: transparent !important;
+  color: #222326 !important;
+  border: 1px solid #222326 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
