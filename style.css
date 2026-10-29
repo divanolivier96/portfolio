@@ -679,8 +679,11 @@ body{background:#212121;color:#f0f0ed}
 /* Texture resources overview preview */
 .resources-overview-preview{
   margin-top:5vw;
-  background:#171717;
-  overflow:hidden;
+  background:transparent;
+  overflow:visible;
+  border:0;
+  box-shadow:none;
+  padding:0;
 }
 .resources-overview-preview img{
   display:block;
@@ -688,6 +691,9 @@ body{background:#212121;color:#f0f0ed}
   height:auto;
   max-height:none;
   object-fit:initial;
+  background:transparent;
+  border:0;
+  box-shadow:none;
 }
 .resources-overview-caption{
   display:flex;
