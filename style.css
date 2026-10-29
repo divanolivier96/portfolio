@@ -1414,3 +1414,21 @@ body .contact button:hover{
   border-color:#222326!important;
   box-shadow:3px 3px 0 #F0442E!important;
 }
+
+
+/* Contact buttons: bone text for legibility on vermillion. */
+body .contact a.pill,
+body .contact .pill,
+body .contact button,
+body.palette-home .contact a.pill,
+body.palette-about .contact a.pill,
+body.palette-services .contact a.pill,
+body.palette-philosophy .contact a.pill,
+body.palette-resources .contact a.pill{
+  color:#F2EBDD!important;
+}
+body .contact a.pill:hover,
+body .contact .pill:hover,
+body .contact button:hover{
+  color:#F2EBDD!important;
+}
