@@ -732,3 +732,60 @@ input[type="reset"],
 .topnav nav a {
   border-radius: 999px !important;
 }
+
+
+/* Resource downloads: clear, consistent actions instead of plain text links */
+.resources-page .texture-card figcaption{
+  align-items:center;
+}
+.resources-page .texture-card figcaption a.download-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.9em;
+  flex:0 0 auto;
+  min-height:42px;
+  padding:.75em 1.1em;
+  border:1px solid #780606;
+  border-radius:999px;
+  background:#780606;
+  color:#fff;
+  font-family:inherit;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+  line-height:1;
+  text-decoration:none;
+  text-transform:uppercase;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.resources-page .texture-card figcaption a.download-button span{
+  font-size:16px;
+  line-height:.8;
+  font-weight:400;
+  transition:transform .18s ease;
+}
+.resources-page .texture-card figcaption a.download-button:hover{
+  background:#171717;
+  color:#fff;
+  border-color:#171717;
+  transform:translateY(-2px);
+  text-decoration:none;
+}
+.resources-page .texture-card figcaption a.download-button:hover span{
+  transform:translateY(2px);
+}
+.resources-page .texture-card figcaption a.download-button:focus-visible{
+  outline:2px solid #f0f0ed;
+  outline-offset:3px;
+}
+@media(max-width:800px){
+  .resources-page .texture-card figcaption{
+    align-items:flex-start;
+  }
+  .resources-page .texture-card figcaption a.download-button{
+    min-height:38px;
+    padding:.7em 1em;
+    font-size:10px;
+  }
+}
