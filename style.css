@@ -721,29 +721,3 @@ body{background:#212121;color:#f0f0ed}
 }
 
 
-/* Optional colour study: graphite, warm paper and muted indigo */
-body.palette-indigo{--bg:#212121;--ink:#eeeae3;--rule:rgba(238,234,227,.62)}
-body.palette-indigo .topnav{background:#34304f!important;color:#eeeae3!important;border-bottom-color:rgba(238,234,227,.28)!important}
-body.palette-indigo .topnav .home,body.palette-indigo .topnav .home:hover{color:#eeeae3!important}
-body.palette-indigo .topnav .home-slash{background:#eeeae3!important;color:#34304f!important}
-body.palette-indigo .topnav nav a{color:#eeeae3!important;border-color:#eeeae3!important}
-body.palette-indigo .topnav nav a:hover{background:#eeeae3!important;color:#34304f!important}
-body.palette-indigo .topnav nav a[aria-current]{background:transparent!important;color:#eeeae3!important;border-color:#eeeae3!important}
-body.palette-indigo .hero h1,body.palette-indigo .hero h2,body.palette-indigo .page h1,body.palette-indigo .row h2,body.palette-indigo .contact h2,body.palette-indigo .more h2,body.palette-indigo .page>.more h2{color:#aaa2e8!important}
-body.palette-indigo .pill,body.palette-indigo .download-button{background:#aaa2e8!important;color:#212121!important;border-color:#aaa2e8!important}
-body.palette-indigo .pill:hover,body.palette-indigo .download-button:hover{background:#212121!important;color:#c5bfff!important;border-color:#c5bfff!important;box-shadow:4px 4px 0 rgba(170,162,232,.2)!important}
-body.palette-indigo .contact,body.palette-indigo .row,body.palette-indigo .rows,body.palette-indigo .more,body.palette-indigo .resource-intro,body.palette-indigo .resource-details,body.palette-indigo .certs{border-color:rgba(238,234,227,.45)!important}
-body.palette-indigo .subnav a,body.palette-indigo .page .tag{color:#c5bfff!important}
-body.palette-indigo .page .tag{border-color:#aaa2e8!important}
-body.palette-indigo .services-list .service-number{color:#aaa2e8!important}
-body.palette-indigo .contact .eyebrow,body.palette-indigo .contact .meta,body.palette-indigo .page>.more .eyebrow{color:#eeeae3!important}
-body.palette-indigo .page::before{background-image:linear-gradient(to right,rgba(170,162,232,.13) 1px,transparent 1px 75px,rgba(170,162,232,.13) 75px 76px,transparent 76px),linear-gradient(to bottom,rgba(170,162,232,.13) 1px,transparent 1px 75px,rgba(170,162,232,.13) 75px 76px,transparent 76px)!important}
-body.palette-indigo .contact .pill,body.palette-indigo .page>.more .pill{background:#aaa2e8!important;color:#212121!important;border-color:#aaa2e8!important}
-.palette-toggle{position:fixed;right:18px;bottom:18px;z-index:21000;display:inline-flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid #aaa2e8;border-radius:999px;background:#212121;color:#eeeae3;font:700 10px/1 "Helvetica Local",Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 3px 16px rgba(0,0,0,.14);transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
-.palette-toggle:hover{transform:translateY(-2px)}
-.palette-toggle:focus-visible{outline:2px solid #aaa2e8;outline-offset:4px}
-.palette-toggle-swatch{width:11px;height:11px;border-radius:50%;background:#aaa2e8;border:1px solid rgba(238,234,227,.6);flex:0 0 auto}
-body.palette-indigo .palette-toggle{background:#34304f;color:#eeeae3;border-color:#aaa2e8}
-body.palette-indigo .palette-toggle-swatch{background:#780606;border-color:#eeeae3}
-@media(max-width:800px){.palette-toggle{right:10px;bottom:10px;padding:9px 11px;font-size:9px}}
-@media(prefers-reduced-motion:reduce){.palette-toggle{transition:none}}
