@@ -519,8 +519,11 @@ body{background:#212121;color:#f0f0ed}
   display:block;
   width:clamp(96px,12vw,136px);
   height:auto;
-  transform-origin:50% 50%;
-  animation:intro-logo-spin 1.6s linear infinite;
+  flex:0 0 auto;
+  transform-box:fill-box;
+  transform-origin:center center;
+  animation:intro-logo-spin 1s linear infinite;
+  will-change:transform;
 }
 .intro-splash-content p{
   margin:0;
