@@ -381,3 +381,35 @@ body.palette-about .page .certs .tags .tag.tag-illustrator {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+
+/* Adobe certification pills: clean graphite pills with a vermillion hover transition. */
+body.palette-about .page .certs .tags .tag,
+body.palette-about .page .certs .tags .tag.tag-photoshop,
+body.palette-about .page .certs .tags .tag.tag-indesign,
+body.palette-about .page .certs .tags .tag.tag-illustrator {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #222326 !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 999px !important;
+  padding: .3em 1.1em !important;
+  transition: background-color .25s ease, color .25s ease, transform .25s ease !important;
+}
+body.palette-about .page .certs .tags .tag:hover,
+body.palette-about .page .certs .tags .tag.tag-photoshop:hover,
+body.palette-about .page .certs .tags .tag.tag-indesign:hover,
+body.palette-about .page .certs .tags .tag.tag-illustrator:hover {
+  background: #F0442E !important;
+  color: #F2EBDD !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.palette-about .page .certs .tags .tag { transition: none !important; }
+}
