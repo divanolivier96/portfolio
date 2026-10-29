@@ -439,3 +439,12 @@ body.palette-about .page section.certs .tags .tag.tag-illustrator {
   outline: none !important;
   box-shadow: none !important;
 }
+
+
+/* Services page hierarchy: graphite numerals, vermillion service names. */
+body.palette-services .page .services-list .service-row .service-number {
+  color: #222326 !important;
+}
+body.palette-services .page .services-list .service-row h2 {
+  color: #F0442E !important;
+}
