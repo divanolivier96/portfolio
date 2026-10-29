@@ -65,33 +65,3 @@
   });
 })();
 
-/* Optional site-wide palette preview, reversible at any time. */
-(() => {
-  const key = 'divan-palette-study';
-  let useIndigo = true;
-  try {
-    const savedPalette = localStorage.getItem(key);
-    if (savedPalette === 'original') useIndigo = false;
-    else if (savedPalette === 'indigo') useIndigo = true;
-  } catch (_) {}
-  if (useIndigo) document.body.classList.add('palette-indigo');
-  const toggle = document.createElement('button');
-  toggle.type = 'button';
-  toggle.className = 'palette-toggle';
-  toggle.setAttribute('aria-pressed', String(useIndigo));
-  toggle.innerHTML = '<span class="palette-toggle-swatch" aria-hidden="true"></span><span class="palette-toggle-label"></span>';
-  const label = toggle.querySelector('.palette-toggle-label');
-  function render() {
-    label.textContent = useIndigo ? 'Return to original colours' : 'Preview indigo palette';
-    toggle.setAttribute('aria-pressed', String(useIndigo));
-    toggle.setAttribute('aria-label', label.textContent);
-  }
-  render();
-  toggle.addEventListener('click', () => {
-    useIndigo = !useIndigo;
-    document.body.classList.toggle('palette-indigo', useIndigo);
-    try { localStorage.setItem(key, useIndigo ? 'indigo' : 'original'); } catch (_) {}
-    render();
-  });
-  document.body.appendChild(toggle);
-})();
