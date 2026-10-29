@@ -326,3 +326,32 @@ body.palette-resources .page > .more .pill:focus-visible {
   outline: 3px solid #FFFFFF !important;
   outline-offset: 4px;
 }
+
+
+/* Keep philosophy and resources content readable on the bone canvas.
+   The dark closing CTA is intentionally excluded from these content rules. */
+body.palette-philosophy .page > h1,
+body.palette-philosophy .page .prose,
+body.palette-philosophy .page .prose p,
+body.palette-philosophy .page .steps,
+body.palette-philosophy .page .steps span,
+body.palette-resources .page > h1,
+body.palette-resources .page > .lead,
+body.palette-resources .resource-intro h2,
+body.palette-resources .resource-intro p,
+body.palette-resources .resource-description,
+body.palette-resources .resources-overview-caption,
+body.palette-resources .texture-card figcaption,
+body.palette-resources .resource-detail-heading h2,
+body.palette-resources .resource-detail-copy,
+body.palette-resources .resource-detail-copy p,
+body.palette-resources .resource-detail-copy li,
+body.palette-resources .resource-credit {
+  color: #222326 !important;
+}
+body.palette-philosophy .page > .eyebrow,
+body.palette-resources .page > .eyebrow,
+body.palette-resources .resource-intro .eyebrow,
+body.palette-resources .resource-detail-heading .eyebrow {
+  color: #F0442E !important;
+}
