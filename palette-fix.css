@@ -461,3 +461,44 @@ body.palette-resources .page .resource-detail-heading h2,
 body.palette-resources .page .resource-intro h2 {
   color: #F0442E !important;
 }
+
+
+/* Resources texture previews: remove decorative blocks behind the photographs. */
+body.palette-resources .resources-page .texture-preview,
+body.palette-resources .resources-page .texture-preview-1,
+body.palette-resources .resources-page .texture-preview-2,
+body.palette-resources .resources-page .texture-preview-3,
+body.palette-resources .resources-page .texture-preview-4 {
+  background: transparent !important;
+  background-image: none !important;
+  filter: none !important;
+}
+body.palette-resources .resources-page .texture-preview img {
+  background: transparent !important;
+  background-color: transparent !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Download buttons: vermillion with bone text, graphite on hover. */
+body.palette-resources .resources-page .texture-card figcaption a.download-button,
+body.palette-resources .resources-page .texture-card figcaption a.download-button:visited {
+  background: #F0442E !important;
+  background-color: #F0442E !important;
+  color: #F2EBDD !important;
+  border: 1px solid #F0442E !important;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+body.palette-resources .resources-page .texture-card figcaption a.download-button span {
+  color: #F2EBDD !important;
+}
+body.palette-resources .resources-page .texture-card figcaption a.download-button:hover,
+body.palette-resources .resources-page .texture-card figcaption a.download-button:focus-visible {
+  background: #222326 !important;
+  background-color: #222326 !important;
+  color: #F2EBDD !important;
+  border-color: #222326 !important;
+}
+body.palette-resources .resources-page .texture-card figcaption a.download-button:hover span,
+body.palette-resources .resources-page .texture-card figcaption a.download-button:focus-visible span {
+  color: #F2EBDD !important;
+}
