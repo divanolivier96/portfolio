@@ -68,8 +68,12 @@
 /* Optional site-wide palette preview, reversible at any time. */
 (() => {
   const key = 'divan-palette-study';
-  let useIndigo = false;
-  try { useIndigo = localStorage.getItem(key) === 'indigo'; } catch (_) {}
+  let useIndigo = true;
+  try {
+    const savedPalette = localStorage.getItem(key);
+    if (savedPalette === 'original') useIndigo = false;
+    else if (savedPalette === 'indigo') useIndigo = true;
+  } catch (_) {}
   if (useIndigo) document.body.classList.add('palette-indigo');
   const toggle = document.createElement('button');
   toggle.type = 'button';
