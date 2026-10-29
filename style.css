@@ -1349,3 +1349,43 @@ body.palette-philosophy .topnav,body.palette-resources .topnav{
   }
   body.palette-home .hero .intro{max-width:86vw}
 }
+
+
+/* CONTACT SECTION PALETTE: bone canvas, graphite structure, vermillion accents. */
+.contact,
+body.palette-home .contact,
+body.palette-about .contact,
+body.palette-services .contact,
+body.palette-philosophy .contact,
+body.palette-resources .contact{
+  background:var(--bone,#F2EBDD)!important;
+  background-color:#F2EBDD!important;
+  color:#222326!important;
+  border-top:2px solid #222326!important;
+  border-bottom:1px solid rgba(34,35,38,.5)!important;
+}
+.contact::before,.contact::after{border-color:rgba(34,35,38,.35)!important}
+.contact h1,.contact h2,.contact h3,.contact p,.contact .eyebrow,
+.contact .meta,.contact label,.contact strong,.contact small{
+  color:#222326!important;
+}
+.contact a:not(.pill),.contact a:not(.pill):visited{
+  color:#222326!important;
+  text-decoration-color:#F0442E!important;
+  text-underline-offset:.2em;
+}
+.contact .pill,.contact a.pill,.contact button{
+  background:#F0442E!important;
+  color:#222326!important;
+  border:1px solid #F0442E!important;
+  box-shadow:none!important;
+}
+.contact .pill:hover,.contact a.pill:hover,.contact button:hover{
+  background:#222326!important;
+  color:#F2EBDD!important;
+  border-color:#222326!important;
+}
+.contact .pill:focus-visible,.contact a:focus-visible,.contact button:focus-visible{
+  outline:3px solid #F0442E!important;
+  outline-offset:4px;
+}
