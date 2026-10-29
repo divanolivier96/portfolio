@@ -454,3 +454,10 @@ body.palette-services .page .services-list .service-row h2 {
 body.palette-philosophy .page .steps span {
   color: #F0442E !important;
 }
+
+
+/* Resources page: highlight the key phrases in vermillion. */
+body.palette-resources .page .resource-detail-heading h2,
+body.palette-resources .page .resource-intro h2 {
+  color: #F0442E !important;
+}
