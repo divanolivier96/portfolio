@@ -14,7 +14,7 @@
       splash.className = 'intro-splash';
       splash.setAttribute('aria-label', 'Welcome');
       splash.setAttribute('role', 'status');
-      splash.innerHTML = '<div class="intro-splash-content"><img src="logo-icon.svg?v=spin2" alt="" class="intro-splash-logo"><p>Welcome</p></div>';
+      splash.innerHTML = '<div class="intro-splash-content"><img src="logo-icon.svg?v=spin3" alt="" class="intro-splash-logo"><p>Welcome</p></div>';
       document.body.prepend(splash);
     }
 
@@ -45,7 +45,7 @@
 
   const cursor = document.createElement('img');
   cursor.className = 'inverting-cursor';
-  cursor.src = 'logo-icon.svg?v=spin2';
+  cursor.src = 'logo-icon.svg?v=spin3';
   cursor.alt = '';
   cursor.setAttribute('aria-hidden', 'true');
   document.body.appendChild(cursor);
