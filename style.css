@@ -674,3 +674,33 @@ body{background:#212121;color:#f0f0ed}
     margin-top:2rem;
   }
 }
+
+
+/* Texture resources overview preview */
+.resources-overview-preview{
+  margin-top:5vw;
+  background:#171717;
+  overflow:hidden;
+}
+.resources-overview-preview img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:75vh;
+  object-fit:contain;
+}
+.resources-overview-caption{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  padding:12px 0 0;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+@media(max-width:800px){
+  .resources-overview-preview{margin-top:8vw}
+  .resources-overview-preview img{max-height:none}
+  .resources-overview-caption{font-size:10px;flex-wrap:wrap}
+}
