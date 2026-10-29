@@ -502,8 +502,8 @@ body{background:#212121;color:#f0f0ed}
   z-index:20000;
   display:grid;
   place-items:center;
-  background:#212121;
-  color:#fff;
+  background:#F0442E;
+  color:#F2EBDD;
   opacity:1;
   visibility:visible;
 }
@@ -519,6 +519,7 @@ body{background:#212121;color:#f0f0ed}
   display:block;
   width:clamp(96px,12vw,136px);
   height:auto;
+  filter:brightness(0) saturate(100%) invert(93%) sepia(8%) saturate(440%) hue-rotate(334deg) brightness(101%) contrast(91%);
   flex:0 0 auto;
   transform-box:fill-box;
   transform-origin:center center;
@@ -527,7 +528,7 @@ body{background:#212121;color:#f0f0ed}
 }
 .intro-splash-content p{
   margin:0;
-  color:#fff;
+  color:#F2EBDD;
   font-size:clamp(15px,1.5vw,19px);
   font-weight:500;
   letter-spacing:.32em;
