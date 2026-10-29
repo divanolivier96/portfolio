@@ -73,3 +73,67 @@
   });
 })();
 
+
+
+/* Texture pack announcement: show after the homepage welcome intro has fully cleared. */
+(() => {
+  const path = window.location.pathname;
+  const isHome = path.endsWith('/') || path.endsWith('/index.html') || path === '';
+  if (!isHome) return;
+
+  let sawSplash = false;
+  let noticeTimer;
+  let pollTimer;
+  let shown = false;
+
+  function showNotice() {
+    if (shown || document.querySelector('.texture-notice')) return;
+    shown = true;
+    const notice = document.createElement('aside');
+    notice.className = 'texture-notice';
+    notice.setAttribute('aria-label', 'New free design resource');
+    notice.innerHTML = `
+      <button class="texture-notice-close" type="button" aria-label="Dismiss texture pack announcement">×</button>
+      <a class="texture-notice-image-link" href="resources.html" tabindex="-1" aria-hidden="true">
+        <img class="texture-notice-image" src="resources/preview_image2.jpg" alt="">
+      </a>
+      <div class="texture-notice-copy">
+        <p class="texture-notice-eyebrow">FREE DOWNLOAD / 001</p>
+        <h2>Warehouse Textures<br>Vol. 01</h2>
+        <p class="texture-notice-description">Four original textures, ready to use.</p>
+        <a class="texture-notice-link" href="resources.html">Explore textures <span aria-hidden="true">↗</span></a>
+      </div>`;
+    document.body.appendChild(notice);
+    requestAnimationFrame(() => notice.classList.add('is-visible'));
+    notice.querySelector('.texture-notice-close').addEventListener('click', () => {
+      notice.classList.remove('is-visible');
+      window.setTimeout(() => notice.remove(), 220);
+    });
+  }
+
+  function checkIntro() {
+    const splash = document.querySelector('.intro-splash');
+    if (splash) {
+      sawSplash = true;
+      return;
+    }
+    if (!sawSplash) return;
+    window.clearInterval(pollTimer);
+    noticeTimer = window.setTimeout(showNotice, 400);
+  }
+
+  function beginWatching() {
+    if (shown || document.querySelector('.texture-notice')) return;
+    pollTimer = window.setInterval(checkIntro, 150);
+    checkIntro();
+  }
+
+  window.addEventListener('load', beginWatching, { once: true });
+  window.addEventListener('pageshow', () => {
+    if (document.readyState === 'complete') beginWatching();
+  });
+  window.addEventListener('pagehide', () => {
+    window.clearTimeout(noticeTimer);
+    window.clearInterval(pollTimer);
+  });
+})();
