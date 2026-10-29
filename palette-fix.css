@@ -448,3 +448,9 @@ body.palette-services .page .services-list .service-row .service-number {
 body.palette-services .page .services-list .service-row h2 {
   color: #F0442E !important;
 }
+
+
+/* Philosophy process labels: Concept, System and Execution in vermillion. */
+body.palette-philosophy .page .steps span {
+  color: #F0442E !important;
+}
